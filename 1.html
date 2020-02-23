@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body{
+            background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/blackorchid.png);
+        }
+        .container{
+            position: relative;
+            margin: 200px auto;
+            width: 300px;
+            height: 300px;
+            perspective: 500px;
+        }
+        .cube{
+            width: inherit;
+            height: inherit;
+            transform-style: preserve-3d;
+        }
+        .side{
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            border: 5px solid #fff;
+            font: normal 70px Arial;
+            text-align: center;
+            line-height: 300px;
+            color: #fff;
+        }
+        .front{
+            transform: translateZ(150px);
+        }
+        .back{
+            transform: rotateY(180deg) translateZ(150px);
+        }
+        .right{
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        .left{
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+        .top{
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        .bottom{
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="side front">front</div>
+            <div class="side back">back</div>
+            <div class="side right">right</div>
+            <div class="side left">left</div>
+            <div class="side top">top</div>
+            <div class="side bottom">bottom</div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
